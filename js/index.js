@@ -48,10 +48,20 @@ let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 let anchors = document.getElementsByTagName('a');
-// console.log(anchors);
-// anchors[0].textContent = siteContent.nav["nav-item-1"];
-
 for (let i=0; i<6; i++) {
   anchors[i].textContent = siteContent.nav['nav-item-' + (i+1)];
 }
 
+let ctaH1 = document.getElementsByTagName('h1')[0];
+ctaH1.textContent = siteContent.cta['h1'];
+
+let ctaButton = document.getElementsByTagName('button')[0];
+ctaButton.textContent = siteContent.cta['button'];
+
+// let topContent0 = document.getElementsByClassName('text-content')[0].getElementsByTagName('h4')[0];
+let textContents = document.getElementsByTagName('h4');
+textContents[0].textContent = siteContent['main-content']['features-h4'];
+textContents[1].textContent = siteContent['main-content']['about-h4'];
+textContents[2].textContent = siteContent['main-content']['services-h4'];
+textContents[3].textContent = siteContent['main-content']['product-h4'];
+textContents[4].textContent = siteContent['main-content']['vision-h4'];
