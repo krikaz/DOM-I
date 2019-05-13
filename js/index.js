@@ -71,3 +71,14 @@ textContentsParagraphs[1].textContent = siteContent['main-content']['about-conte
 textContentsParagraphs[2].textContent = siteContent['main-content']['services-content'];
 textContentsParagraphs[3].textContent = siteContent['main-content']['product-content'];
 textContentsParagraphs[4].textContent = siteContent['main-content']['vision-content'];
+
+let contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+let contactParagraphs = document.querySelectorAll('.contact p');
+contactParagraphs[0].textContent = siteContent['contact']['address'];
+contactParagraphs[1].textContent = siteContent['contact']['phone'];
+contactParagraphs[2].textContent = siteContent['contact']['email'];
+
+let footerP = document.querySelector('footer p');
+footerP.textContent = siteContent['footer']['copyright'];
