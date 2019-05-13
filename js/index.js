@@ -39,7 +39,7 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+//images
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -49,6 +49,8 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+
+//nav
 const nav = document.querySelector('nav');
 const anchorAppend = nav.appendChild(document.createElement('a'));
 anchorAppend.setAttribute('href', '#');
@@ -66,6 +68,7 @@ anchorPrepend.textContent = siteContent.nav['nav-item-8'];
 anchorPrepend.style.color = 'green';
 
 
+//content
 const ctaH1 = document.querySelector('h1');
 ctaH1.textContent = siteContent.cta['h1'];
 
@@ -94,5 +97,7 @@ contactParagraphs[0].textContent = siteContent['contact']['address'];
 contactParagraphs[1].textContent = siteContent['contact']['phone'];
 contactParagraphs[2].textContent = siteContent['contact']['email'];
 
+
+//footer
 const footerP = document.querySelector('footer p');
 footerP.textContent = siteContent['footer']['copyright'];
