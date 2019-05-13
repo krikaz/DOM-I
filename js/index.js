@@ -47,21 +47,27 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-let anchors = document.getElementsByTagName('a');
+let anchors = document.querySelectorAll('header nav a');
 for (let i=0; i<6; i++) {
   anchors[i].textContent = siteContent.nav['nav-item-' + (i+1)];
 }
 
-let ctaH1 = document.getElementsByTagName('h1')[0];
+let ctaH1 = document.querySelector('h1');
 ctaH1.textContent = siteContent.cta['h1'];
 
-let ctaButton = document.getElementsByTagName('button')[0];
+let ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent.cta['button'];
 
-// let topContent0 = document.getElementsByClassName('text-content')[0].getElementsByTagName('h4')[0];
-let textContents = document.getElementsByTagName('h4');
+let textContents = document.querySelectorAll('.text-content h4');
 textContents[0].textContent = siteContent['main-content']['features-h4'];
 textContents[1].textContent = siteContent['main-content']['about-h4'];
 textContents[2].textContent = siteContent['main-content']['services-h4'];
 textContents[3].textContent = siteContent['main-content']['product-h4'];
 textContents[4].textContent = siteContent['main-content']['vision-h4'];
+
+let textContentsParagraphs = document.querySelectorAll('.text-content p');
+textContentsParagraphs[0].textContent = siteContent['main-content']['features-content'];
+textContentsParagraphs[1].textContent = siteContent['main-content']['about-content'];
+textContentsParagraphs[2].textContent = siteContent['main-content']['services-content'];
+textContentsParagraphs[3].textContent = siteContent['main-content']['product-content'];
+textContentsParagraphs[4].textContent = siteContent['main-content']['vision-content'];
