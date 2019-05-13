@@ -53,15 +53,17 @@ const nav = document.querySelector('nav');
 const anchorAppend = nav.appendChild(document.createElement('a'));
 anchorAppend.setAttribute('href', '#');
 
-const anchorPrepend = document.querySelector('nav a').prepend(document.createElement('a'));
-anchorPrepend.setAttribute('href', '#');
-
 const anchors = document.querySelectorAll('header nav a');
 for (let i=0; i<anchors.length; i++) {
   anchors[i].textContent = siteContent.nav['nav-item-' + (i+1)];
   anchors[i].style.color = 'green';
 }
 
+nav.prepend(document.createElement('a'));
+const anchorPrepend = document.querySelector('nav a')
+anchorPrepend.setAttribute('href', '#');
+anchorPrepend.textContent = siteContent.nav['nav-item-8'];
+anchorPrepend.style.color = 'green';
 
 
 const ctaH1 = document.querySelector('h1');
